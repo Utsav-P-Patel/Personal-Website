@@ -1,0 +1,63 @@
+.project-container {
+    display: flex;
+    align-items: flex-start;
+    border-left: 2px solid #888888; /* Line connecting rows */
+    padding-left: 20px; /* Adjust as needed */
+  }
+  
+  .project {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .project-image {
+    flex: 0 0 auto;
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    background-color: #f2f2f2; /* Placeholder color */
+    border-radius: 4px; /* Optional: Rounded corners */
+  }
+  
+  .project-title {
+    margin-left: 20px; /* Adjust as needed */
+    cursor: pointer;
+  }
+  
+  .project-key-points {
+    display: none; /* Hidden by default */
+    margin-top: 10px; /* Adjust as needed */
+    padding-left: 20px; /* Adjust as needed */
+  }
+
+  .project-key-points.show {
+    display: block;
+    margin-top: 10px; /* Adjust as needed */
+    padding-left: 20px;
+  }
+  
+  .project-time {
+    margin-left: 20px; /* Adjust as needed */
+    font-size: 14px; /* Adjust as needed */
+    color: #888888; /* Optional: Time color */
+  }
+  
+  .project-tools {
+    margin-top: 10px; /* Adjust as needed */
+  }
+  
+  .project-tools ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .project-tools li {
+    margin-right: 10px; /* Adjust as needed */
+    padding: 6px 12px; /* Adjust as needed */
+    background-color: #f2f2f2; /* Optional: Button background color */
+    border-radius: 20px; /* Optional: Rounded buttons */
+    font-size: 12px; /* Adjust as needed */
+  }
+  

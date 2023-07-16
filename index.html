@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <div class="body__bg"></div>
 
   <!-- Add a animation so that the image in the home page animates and goes in the navigation bar. -->
 
@@ -24,7 +25,7 @@
 <nav class="navbar">
   <div class="navbar__logo">
     <a href="index.html">
-      <img src="src/images/title.png" alt="Logo">
+      <img id="nav" src="src/images/title.png" alt="Logo" class="img-fluid rounded-circle">
     </a>
   </div>
   <div class="navbar__toggle" onclick="toggleMenu()">
@@ -50,11 +51,23 @@
 </nav>
 
 
+<!-- Make animation so that the image from navbar animates to its place when coming back to index page. 
+Also add name in navbar for pages other than index.html -->
+
 
 <!-- Main content -->
   <div class="container mt-5">
-    <h1>Utsav Patel</h1>
-    <p>A software developer with a passion for IOS and web development. With a knack for teamwork, problem-solving, and an insatiable thirst for learning, I thrive on turning ideas into reality. Whether it's unraveling intricate problems or tackling challenges, I'm always up for the next exciting project!</p>
+    <h3 class="mb-5 pb-5">Note: The website is still under construction.</h3>
+    <div class="row">
+      <div class="col-md-4">
+          <img id="body" src="src/images/title.png" alt="Utsav patel" class="img-fluid rounded-circle">
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-7">
+        <h1>Utsav Patel</h1>
+        <p>A software developer with a passion for IOS and web development. With a knack for teamwork, problem-solving, and an insatiable thirst for learning, I thrive on turning ideas into reality. Whether it's unraveling intricate problems or tackling challenges, I'm always up for the next exciting project!</p>
+      </div>
+    </div>
   </div>
 
 
@@ -69,13 +82,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+          $('.background-overlay').fadeOut();
+        } else {
+          $('.background-overlay').fadeIn();
+        }
+      });
+    });
+  </script>
     <!-- 
     Utsav Patel is a software developer with a passion for IOS and web development. He is a team player with strong problem-solving skills and a continuous learner.
 
     Hey there! I'm Utsav Patel, a passionate software developer who loves crafting incredible iOS and web experiences. With a knack for teamwork, problem-solving, and an insatiable thirst for learning, I thrive on turning ideas into reality. Whether it's tackling challenges or unraveling intricate problems, I'm always up for the next exciting project!
 
     A software developer with a passion for IOS and web development. With a knack for teamwork, problem-solving, and an insatiable thirst for learning, I thrive on turning ideas into reality. Whether it's tackling challenges or unraveling intricate problems, I'm always up for the next exciting project! -->
-
 </body>
 </html>

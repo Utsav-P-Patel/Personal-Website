@@ -6,7 +6,7 @@
     padding: 20px;
     background-color: transparent;
   }
-  
+
   .navbar__logo img {
     height: 40px;
   }
@@ -43,7 +43,7 @@
     color: #f1f1f1;
   }
   
-  body {
+  /* body {
     background: radial-gradient(circle 30px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(39, 115, 244, 0.3), rgba(26, 60, 143, 0.3)), linear-gradient(to bottom, #2773f4, #b30f81);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -51,8 +51,42 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
+  } */
+  
+  
+
+  body {
+    background:  linear-gradient(to bottom, #2773f4, #b30f81);
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    animation: moveLinearGradient 5s linear infinite;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  .body__bg {
+    background: radial-gradient(circle 30px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(39, 115, 244, 0.3), rgba(26, 60, 143, 0.3));
+    background-size: 100% 200%; 
+    background-repeat: no-repeat;
+    transition: background-position 0.2s ease-in-out;
+    margin: 0;
+    padding: 0;
   }
   
+  @keyframes moveLinearGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 0% 100%; /* Move the linear gradient to the bottom */
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+
   @media (max-width: 768px) {
     .navbar {
       flex-direction: column;
