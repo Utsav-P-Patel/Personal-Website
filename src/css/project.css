@@ -9,44 +9,65 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 20px; /* Adjust as needed */
+    width: 100%;
   }
   
   .project-image {
     flex: 0 0 auto;
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    background-color: #f2f2f2; /* Placeholder color */
-    border-radius: 4px; /* Optional: Rounded corners */
+    min-height: 100px;
+    width: 100%;
+    width: 200px; /* remove afterwards as if some project dont have image it manages it. */
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    margin-bottom: 10px;
   }
   
   .project-title {
-    margin-left: 20px; /* Adjust as needed */
-    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
   }
   
   .project-key-points {
+    width: 100%;
     display: none; /* Hidden by default */
-    margin-top: 10px; /* Adjust as needed */
-    padding-left: 20px; /* Adjust as needed */
+    text-align: left;
+    margin-bottom: 10px;
   }
 
   .project-key-points.show {
+    text-align: left;
+    width: 100%;
     display: block;
-    margin-top: 10px; /* Adjust as needed */
-    padding-left: 20px;
+    margin-bottom: 10px;
   }
   
   .project-time {
-    margin-left: 20px; /* Adjust as needed */
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
     font-size: 14px; /* Adjust as needed */
     color: #888888; /* Optional: Time color */
   }
   
+  .project-time::before {
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: -7px;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 9px;
+    background-color: #888888;
+  }
+  
   .project-tools {
-    margin-top: 10px; /* Adjust as needed */
+    width: 100%;
+    margin-bottom: 20px;
   }
   
   .project-tools ul {
+    width: 100%;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -55,6 +76,7 @@
   
   .project-tools li {
     margin-right: 10px; /* Adjust as needed */
+    margin-bottom: 10px;
     padding: 6px 12px; /* Adjust as needed */
     background-color: #f2f2f2; /* Optional: Button background color */
     border-radius: 20px; /* Optional: Rounded buttons */
