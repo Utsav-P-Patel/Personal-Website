@@ -7,10 +7,32 @@
     background-color: transparent;
   }
 
-  .navbar__logo img {
-    height: 40px;
+  .navbar__logo {
+    display: flex;
+    align-items: center;
   }
   
+  .navbar__logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar__title {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .navbar__title a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .navbar__title a:hover,
+  .navbar__title a.active{
+    text-decoration: none;
+    color: #fff;
+  }
+
   .navbar__toggle {
     display: none;
     cursor: pointer;
@@ -33,13 +55,34 @@
   }
   
   .navbar__link {
+    position: relative;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
   }
+  .navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar__link:hover::after,
+  .navbar__link.active::after {
+    transform: scaleX(1);
+    transform-origin: right;
+    background-color: #fff;
+  }
   
   .navbar__link:hover,
   .navbar__link.active {
+    text-decoration: none;
     color: #f1f1f1;
   }
   
