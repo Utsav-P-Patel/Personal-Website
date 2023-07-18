@@ -50,9 +50,9 @@
   background: inherit;
 }
 
-.ui-btn:hover, .ui-btn:focus {
-  /* background: var(--btn-hover-bg); */
-}
+/* .ui-btn:hover, .ui-btn:focus {
+  background: var(--btn-hover-bg);
+} */
 
 .ui-btn:hover span, .ui-btn:focus span {
   color: var(--hover-btn-color);

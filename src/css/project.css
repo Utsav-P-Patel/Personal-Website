@@ -1,7 +1,15 @@
+:root {
+  --git-like-border-left: #888888;
+  --project-image-bg-color: #f2f2f2;
+  --project-title-underline-color: #888888;
+  --project-time-color: #888888;
+  --project-tools-bg-color: #f2f2f2;
+}
+
 .project-container {
     display: flex;
     align-items: flex-start;
-    border-left: 2px solid #888888; /* Line connecting rows */
+    border-left: 2px solid var(--git-like-border-left); /* Line connecting rows */
     padding-left: 20px; /* Adjust as needed */
     justify-content: center;
   }
@@ -18,7 +26,7 @@
     min-height: 100px;
     width: 100%;
     width: 200px; /* remove afterwards as if some project dont have image it manages it. */
-    background-color: #f2f2f2;
+    background-color: var(--project-image-bg-color);
     border-radius: 4px;
     margin-bottom: 20px;
   }
@@ -36,7 +44,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #888888;
+    background-color: var(--project-title-underline-color);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
@@ -65,7 +73,7 @@
     text-align: left;
     margin-bottom: 10px;
     font-size: 14px; /* Adjust as needed */
-    color: #888888; /* Optional: Time color */
+    color: var(--project-time-color); /* Optional: Time color */
   }
   
   /* Dosent work when project description expands */
@@ -77,7 +85,7 @@
     transform: translateY(-50%);
     height: 2px;
     width: 18px;
-    background-color: #888888;
+    background-color: var(--git-like-border-left);
   }
   
   .project-tools {
@@ -97,7 +105,7 @@
     margin-right: 10px; /* Adjust as needed */
     margin-bottom: 10px;
     padding: 6px 12px; /* Adjust as needed */
-    background-color: #f2f2f2; /* Optional: Button background color */
+    background-color: var(--project-tools-bg-color); /* Optional: Button background color */
     border-radius: 20px; /* Optional: Rounded buttons */
     font-size: 12px; /* Adjust as needed */
   }
